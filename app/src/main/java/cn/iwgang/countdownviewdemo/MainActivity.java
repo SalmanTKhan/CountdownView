@@ -1,6 +1,7 @@
 package cn.iwgang.countdownviewdemo;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -77,28 +78,15 @@ public class MainActivity extends AppCompatActivity implements CountdownView.OnC
         }.execute();
 
         CountdownView mCvCountdownViewTest6 = (CountdownView)findViewById(R.id.cv_countdownViewTest6);
+        mCvCountdownViewTest6.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IndieFlower.ttf"));
         long time6 = (long)2 * 60 * 60 * 1000;
         mCvCountdownViewTest6.start(time6);
 
-
-        findViewById(R.id.btn_toDynamicShowActivity).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DynamicShowActivity.class));
-            }
-        });
 
         findViewById(R.id.btn_toListViewActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ListViewActivity.class));
-            }
-        });
-
-        findViewById(R.id.btn_toRecyclerViewActivity).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
             }
         });
     }
