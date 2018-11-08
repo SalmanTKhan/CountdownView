@@ -29,7 +29,7 @@
         <attr name="suffixMinute" format="string" />
         <attr name="suffixSecond" format="string" />
         <attr name="suffixMillisecond" format="string" />
-        <attr name="suffixGravity">
+        <attr name="suffixTextGravity">
             <enum name="top" value="0" />
             <enum name="center" value="1" />
             <enum name="bottom" value="2" />
