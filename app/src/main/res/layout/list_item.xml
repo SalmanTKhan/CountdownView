@@ -45,7 +45,7 @@
         app:isShowMillisecond="true"
         app:isShowMinute="true"
         app:isShowSecond="true"
-        app:suffixGravity="center"
+        app:suffixTextGravity="center"
         app:suffixTextColor="#000000"
         app:suffixTextSize="15sp"
         app:timeTextColor="#000000"
