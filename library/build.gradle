@@ -1,5 +1,9 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.achenglike'
+
 android {
     compileSdkVersion 26
     buildToolsVersion '28.0.3'
@@ -22,4 +26,3 @@ android {
 dependencies {
 }
 
-apply from: './build_push_maven.gradle'
