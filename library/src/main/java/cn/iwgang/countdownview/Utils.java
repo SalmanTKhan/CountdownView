@@ -21,6 +21,10 @@ final class Utils {
         return spValue * scale;
     }
 
+    public static String formatDay(int time) {
+        return String.valueOf(time)+"天";
+    }
+
     public static String formatNum(int time) {
         return time < 10 ? "0" + time : String.valueOf(time);
     }

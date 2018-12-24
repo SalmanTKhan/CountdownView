@@ -280,12 +280,12 @@ class BackgroundCountdown extends BaseCountdown {
                 String tempDay = String.valueOf(mDay);
                 mTimeTextPaint.getTextBounds(tempDay, 0, tempDay.length(), rect);
                 mDayTimeBgWidth = rect.width() + (Utils.dp2px(mContext, 2) * 4);
-                width += mDayTimeBgWidth;
             } else {
                 mDayTimeBgWidth = mTimeBgSize;
-                width += mTimeBgSize;
             }
-
+            // 加入“天“的占位大小
+            mDayTimeBgWidth += Utils.dp2px(mContext, 4);
+            width += mDayTimeBgWidth;
             width += (mTimeBgBorderSize * 2);
         }
 
@@ -325,7 +325,7 @@ class BackgroundCountdown extends BaseCountdown {
                 }
             }
             // draw day text
-            canvas.drawText(Utils.formatNum(mDay), mDayBgRectF.centerX(), mTimeTextBaseY, mTimeTextPaint);
+            canvas.drawText(Utils.formatDay(mDay), mDayBgRectF.centerX(), mTimeTextBaseY, mTimeTextPaint);
             if (mSuffixDayTextWidth > 0) {
                 // draw day suffix
                 canvas.drawText(mSuffixDay, mLeftPaddingSize + mDayTimeBgWidth + mSuffixDayLeftMargin + (mTimeBgBorderSize * 2), mSuffixDayTextBaseline, mSuffixTextPaint);
