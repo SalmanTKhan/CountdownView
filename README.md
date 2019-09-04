@@ -1,7 +1,3 @@
-Get my version of the latest release via jitpack here:
-[![](https://jitpack.io/v/ahaverty/CountdownView.svg)](https://jitpack.io/#ahaverty/CountdownView)
-
-
 # CountdownView
 Android countdown view，use canvas draw，supports multiple styles
 
