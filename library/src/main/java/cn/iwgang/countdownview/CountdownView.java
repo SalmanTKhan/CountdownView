@@ -3,6 +3,7 @@ package cn.iwgang.countdownview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -112,6 +113,14 @@ public class CountdownView extends View {
     private void reLayout() {
         mCountdown.reLayout();
         requestLayout();
+    }
+
+    /**
+     * Set typeface. Provide null to reset to system default.
+     * @param aTypeface typeface
+     */
+    public void setTypeface(Typeface aTypeface){
+        mCountdown.setTypeface(aTypeface);
     }
 
     /**

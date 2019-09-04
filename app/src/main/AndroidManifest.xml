@@ -17,9 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DynamicShowActivity" android:windowSoftInputMode="stateHidden" />
         <activity android:name=".ListViewActivity" />
-        <activity android:name=".RecyclerViewActivity" />
     </application>
 
 </manifest>

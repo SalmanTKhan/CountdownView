@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            app:isHideTimeBackground="false"
+            app:isHideTimeBackground="true"
             app:isShowDay="false"
             app:isShowHour="true"
             app:isShowMillisecond="false"
@@ -27,8 +27,10 @@
             app:suffixTextColor="#000000"
             app:suffixTextSize="20sp"
             app:timeBgColor="#FF5000"
-            app:timeTextColor="#FFFFFF"
-            app:timeTextSize="20sp"/>
+            app:timeTextColor="#000"
+            app:timeTextSize="20sp"
+            app:typeface="fonts/Poppins-Light.ttf"
+            />
 
         <cn.iwgang.countdownview.CountdownView
             android:id="@+id/cv_countdownViewTest2"
@@ -121,7 +123,11 @@
             app:suffixTextColor="#444444"
             app:suffixTextSize="20sp"
             app:timeTextColor="#444444"
-            app:timeTextSize="60sp"/>
+            app:timeTextSize="60sp"
+            app:typeface="fonts/IndieFlower.ttf"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            />
 
         <cn.iwgang.countdownview.CountdownView
             android:id="@+id/cv_countdownViewTest3"

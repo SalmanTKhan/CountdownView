@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.view.View;
 
@@ -56,6 +57,7 @@ class BaseCountdown {
     private float mTempSuffixSecondLeftMargin, mTempSuffixSecondRightMargin;
     private float mTempSuffixMillisecondLeftMargin;
     private String mTempSuffixMinute, mTempSuffixSecond;
+    private Typeface mTypeface;
 
     public void initStyleAttr(Context context, TypedArray ta) {
         mContext = context;
@@ -99,6 +101,11 @@ class BaseCountdown {
         // time validate
         if (!isShowDay && !isShowHour && !isShowMinute) isShowSecond = true;
         if (!isShowSecond) isShowMillisecond = false;
+
+        final String typefaceName = ta.getString(R.styleable.CountdownView_typeface);
+        if(typefaceName != null){
+            mTypeface = Typeface.createFromAsset(context.getAssets(), typefaceName);
+        }
     }
 
     public void initialize() {
@@ -174,6 +181,7 @@ class BaseCountdown {
         if (isTimeTextBold) {
             mMeasureHourWidthPaint.setFakeBoldText(true);
         }
+        setTypeface(mTypeface);
     }
 
     private void initSuffix() {
@@ -388,9 +396,10 @@ class BaseCountdown {
     protected void initTimeTextBaseInfo() {
         // initialize time text width and height
         Rect rect = new Rect();
+        mTimeTextPaint.getTextBounds("0123456789", 0, 10, rect);
+        mTimeTextHeight = rect.height();
         mTimeTextPaint.getTextBounds("00", 0, 2, rect);
         mTimeTextWidth = rect.width();
-        mTimeTextHeight = rect.height();
         mTimeTextBottom = rect.bottom;
     }
 
@@ -495,6 +504,20 @@ class BaseCountdown {
         }
 
         return width;
+    }
+
+    /**
+     * Set typeface. If null - reset to system default.
+     * @param aTypeface typeface.
+     */
+    public void setTypeface(final Typeface aTypeface){
+        mTypeface = aTypeface;
+        mTimeTextPaint.setTypeface(mTypeface);
+        mSuffixTextPaint.setTypeface(mTypeface);
+        mMeasureHourWidthPaint.setTypeface(mTypeface);
+        mTimeTextPaint.setFlags(mTimeTextPaint.getFlags() | Paint.SUBPIXEL_TEXT_FLAG);
+        mSuffixTextPaint.setFlags(mTimeTextPaint.getFlags() | Paint.SUBPIXEL_TEXT_FLAG);
+        mMeasureHourWidthPaint.setFlags(mTimeTextPaint.getFlags() | Paint.SUBPIXEL_TEXT_FLAG);
     }
 
     /**

@@ -49,6 +49,7 @@
         <attr name="timeBgBorderColor" format="color" />
         <attr name="timeBgBorderSize" format="dimension" />
         <attr name="timeBgBorderRadius" format="dimension" />
+        <attr name="typeface" format="string" />
     </declare-styleable>
 
 </resources>
