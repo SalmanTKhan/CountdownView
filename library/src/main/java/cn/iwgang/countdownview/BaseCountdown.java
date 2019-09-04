@@ -81,7 +81,7 @@ class BaseCountdown {
         mSuffixMinute = ta.getString(R.styleable.CountdownView_suffixMinute);
         mSuffixSecond = ta.getString(R.styleable.CountdownView_suffixSecond);
         mSuffixMillisecond = ta.getString(R.styleable.CountdownView_suffixMillisecond);
-        mSuffixGravity = ta.getInt(R.styleable.CountdownView_suffixGravity, 1);
+        mSuffixGravity = ta.getInt(R.styleable.CountdownView_suffixTextGravity, 1);
         mSuffixLRMargin = ta.getDimension(R.styleable.CountdownView_suffixLRMargin, -1);
         mSuffixDayLeftMargin = ta.getDimension(R.styleable.CountdownView_suffixDayLeftMargin, -1);
         mSuffixDayRightMargin = ta.getDimension(R.styleable.CountdownView_suffixDayRightMargin, -1);
