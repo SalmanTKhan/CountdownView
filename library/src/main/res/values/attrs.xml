@@ -22,7 +22,7 @@
 
         <attr name="isSuffixTextBold" format="boolean" />
         <attr name="suffixTextSize" format="dimension" />
-        <attr name="suffixTextColor" format="color" />
+        <attr name="suffixTextColor" format="reference|color" />
         <attr name="suffix" format="string" />
         <attr name="suffixDay" format="string" />
         <attr name="suffixHour" format="string" />
@@ -46,7 +46,7 @@
         <attr name="suffixMillisecondLeftMargin" format="dimension" />
 
         <attr name="isShowTimeBgBorder" format="boolean" />
-        <attr name="timeBgBorderColor" format="color" />
+        <attr name="timeBgBorderColor" format="reference|color" />
         <attr name="timeBgBorderSize" format="dimension" />
         <attr name="timeBgBorderRadius" format="dimension" />
         <attr name="typeface" format="string" />
