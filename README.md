@@ -1,3 +1,6 @@
+# Getting the CountdownView library
+[![](https://jitpack.io/v/SalmanTKhan/CountdownView.svg)](https://jitpack.io/#SalmanTKhan/CountdownView)
+
 # CountdownView
 Android countdown view，use canvas draw，supports multiple styles
 
