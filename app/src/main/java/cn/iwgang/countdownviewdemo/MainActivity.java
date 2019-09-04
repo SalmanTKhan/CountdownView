@@ -10,7 +10,6 @@ import android.view.View;
 
 import cn.iwgang.countdownview.CountdownView;
 
-
 public class MainActivity extends AppCompatActivity implements CountdownView.OnCountdownEndListener {
 
     @Override
@@ -83,10 +82,24 @@ public class MainActivity extends AppCompatActivity implements CountdownView.OnC
         mCvCountdownViewTest6.start(time6);
 
 
+        findViewById(R.id.btn_toDynamicShowActivity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DynamicShowActivity.class));
+            }
+        });
+
         findViewById(R.id.btn_toListViewActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ListViewActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_toRecyclerViewActivity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
             }
         });
     }
@@ -99,5 +112,3 @@ public class MainActivity extends AppCompatActivity implements CountdownView.OnC
         }
     }
 }
-
-
